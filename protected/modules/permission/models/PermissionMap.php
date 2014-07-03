@@ -119,7 +119,11 @@ class PermissionMap extends CActiveRecord
             
         }
         
-        
+        /**
+		 * delete all permissions assigned to the role
+		 * @param numeric $roleId role id
+		 * @return boolean true
+		 */
         public function deleteRolePermission($roleId=0){
             $this->deleteAllByAttributes(array(
                 'principal_id'=>$roleId,
